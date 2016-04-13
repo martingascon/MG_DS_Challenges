@@ -1,29 +1,13 @@
-# Supermarket. Martin Gascon. Insight Data Science. 
+ICIJ Offshore leaks. Martin Gascon. Insight Data Science. 
 # ============================================================
-# There is a large dataset containing geographical information about points of sale for products, for thousands of customers 
-# and thousands of products. The original dataset was in the form of 3 tables:
-# a)  supermarket_distances: three columns. The first column is the customer id, the second is the shop id and the third 
-#     is the distance between the customer’s house and the shop location. The distance is a calculated in meters as a straight 
-#     line so it does not take into account the road graph.
-# b) supermarket_prices: two columns. The first column is the product id and the second column is its unit price. 
-#    The price is in Euro and it is calculated as the average unit price for the time span of the dataset.
-# c) supermarket_purchases: four columns. The first column is the customer id, the second is the product id, the third 
-#    is the shop id and the fourth is the total amount of items that the customer bought the product in that particular shop. 
-#    The data is recorded from January 2007 to December 2011.
+# There is a large dataset containing  
 
-# For ease of analysis, we will be working with an aggregated version of the dataset.  
-# The data is aggregated by customer, and info from different shops are pivoted to new columns. 
-# We've added this file (csv format) to the "Data Challenges/Supermarket" Dropbox folder.
-
-# Imagine you were a data scientist working for a large supermarket chain and were given this dataset. 
-# Obviously you will need to initially explore and visualize the data, but ultimately try to find *actionable*
-# insights rather than "interesting" findings.
 
 
 #================================
 library(corrplot)
 # set working Directory
-setwd('~/Dropbox/a_Insight/c_challenges/supermarket/') 
+setwd('~/Dropbox/a_Insight/c_challenges/ICIJ_offshore_leaks_DB_MG/') 
 
 # read the Minimum wage from  (1976 to 2014) 
 data = read.table("./supermarket_data_aggr.csv", sep=",",head=TRUE)   
